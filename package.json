@@ -1,0 +1,16 @@
+{
+  "name": "webpack-module-federation",
+  "version": "1.0.0",
+  "description": "Webpack 5 Module Federation & Micro-Frontends https://www.linkedin.com/pulse/module-federation-micro-frontends-webpack-5-prasenjit-sutradhar/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"node dashboard/src/server.js\" \"node hello-world/src/server.js\" \"node image-caption/src/server.js\" \"node apple/src/server.js\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

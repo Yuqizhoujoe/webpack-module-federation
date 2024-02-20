@@ -9,7 +9,7 @@ const { ModuleFederationPlugin } = require("webpack").container;
 module.exports = {
   entry: "./src/apple-page.js",
   output: {
-    filename: "bundle.[contenthash].js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "./build"),
     publicPath: "http://localhost:9002/",
   },
@@ -59,7 +59,7 @@ module.exports = {
       filename: "apple.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css",
+      filename: "[name].[contenthash].css",
     }),
     new ModuleFederationPlugin({
       name: "AppleApp",

@@ -8,7 +8,7 @@ const { ModuleFederationPlugin } = require("webpack").container;
 module.exports = {
   entry: "./src/image-caption.js",
   output: {
-    filename: "bundle.[contenthash].js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "./build"),
     publicPath: "http://localhost:9003/",
   },
@@ -24,7 +24,7 @@ module.exports = {
       description: "Image Caption page",
     }),
     new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css",
+      filename: "[name].[contenthash].css",
     }),
     new ModuleFederationPlugin({
       name: "ImageCaptionApp",

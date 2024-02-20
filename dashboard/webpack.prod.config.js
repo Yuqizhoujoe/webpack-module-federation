@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: "./src/dashboard.js",
   output: {
-    filename: "bundle.[contenthash].js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "./build"),
     publicPath: "http://localhost:9000/",
   },
@@ -33,7 +33,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css",
+      filename: "[name].[contenthash].css",
     }),
     new HtmlWebpackPlugin({
       filename: "dashboard.html",
